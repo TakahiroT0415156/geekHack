@@ -1,0 +1,8 @@
+<h1>記事一覧</h1>
+
+<% @posts.each do |t| %>
+  <%= t.title %>
+  <%= t.course %>
+  <%= t.word %>
+  <%= link_to "詳細へ", post_path(t.id) %>
+<% end %>
