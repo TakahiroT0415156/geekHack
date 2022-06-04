@@ -1,5 +1,4 @@
 <%= form_for @post do |f| %>
-  <%= render 'layouts/error_messages', model: f.object %>
   <%= f.label :name, "name" %><br />
   <%= f.text_field :name %><br />
   <%= f.label :title, "title" %><br />
