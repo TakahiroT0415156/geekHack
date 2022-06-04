@@ -1,16 +1,22 @@
 <h1>記事一覧</h1>
 
-<div class="cp_card04">
+
   <% @posts.each do |t| %>
-    <div class="details">
-    <%= t.title %>
+    <div class="cp_card04">
+      <div class="details">
+        <div class="category">
+          <p><%= t.word %></p>
+        </div>
+      </div>
+      <div class="description">
+        <h1><%= t.title %></h1>
+        <div class="text">
+        <a href="#0" class=""><%= link_to "詳細へ", post_path(t.id) %></a>
+        </div>
+      </div>
     </div>
-    <div class="category">
-    <%= t.word %>
-    </div>
-    <%= link_to "詳細へ", post_path(t.id) %>
   <% end %>
-</div>
+
 
 <div class="cp_card04">
 

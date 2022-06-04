@@ -1,1 +1,18 @@
-<%=qiita_markdown( @post.body) %>
+
+<div class="cp_card">
+    <div class="details">  
+        <div class="midashi">
+        <%= @post.name %>
+        </div>
+        <div class="category">
+        <p><%= @post.word %></p>
+        </div>
+    </div>     
+    
+    <div class="description">
+    <h1><%= @post.title %></h1>
+    </div>
+
+    <%=qiita_markdown( @post.body) %>
+</div>
+
