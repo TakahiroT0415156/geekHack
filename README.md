@@ -1,24 +1,46 @@
-# README
+# フェッチ&&マージの仕方
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 1.最新情報をローカルに持ってくる
+```rb:ターミナル
+git fetch origin main
+```
 
-Things you may want to cover:
+## 2.ローカルのファイルが最新の状態に更新する
+```rb:ターミナル
+git merge origin/main
+```
 
-* Ruby version
+## 全ての情報を取ってくる場合
+```rb:ターミナル
+git pull origin main
+```
 
-* System dependencies
+*** 
 
-* Configuration
+# ここからはプッシュの仕方
 
-* Database creation
 
-* Database initialization
+## 1.コードをプッシュする場合
+```rb:ターミナル
+git add -p
+```
 
-* How to run the test suite
+## 1.ファイルをプッシュする場合
+```rb:ターミナル
+git add ファイル名
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## 1.全てのファイルをプッシュする場合
+```rb:ターミナル
+git add .
+```
 
-* Deployment instructions
+## 2.コミットする
+```rb:ターミナル
+git commit -m "〇〇"
+```
 
-* ...
+## 3.プッシュする
+```rb:ターミナル
+git push origin ブランチ名
+```
