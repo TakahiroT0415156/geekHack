@@ -1,15 +1,14 @@
 class PostsController < ApplicationController
+  def top
+    @posts = Post.all
+  end
+
   def index
     @posts = Post.all
   end
 
   def new
     @post = Post.new
-    if @post.save
-      redirect_to controller: :posts, action: :index
-    else
-      render "new"
-    end
   end
 
   def create
