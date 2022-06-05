@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
   def top
-    @posts = Post.all
+    image = ["kawauso.jpeg", "panda.jpeg", "pengin.jpeg", "pengin2.jpeg", "suzume.jpeg", "tanuki.jpeg"]
+    @image = image.sample
+    random = Post.all
+    @posts = random.shuffle
   end
 
   def index
-    @posts = Post.all
+    posts = Post.all
+    @posts = posts.reverse
   end
 
   def new
