@@ -1,3 +1,181 @@
 // Place all the styles related to the post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*, *::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+.formmmm {
+    width: 80%;
+    position: absolute;
+        left: 10%;
+    padding-bottom: 10%;
+}
+
+.cp_form {
+	border-radius: 0 6px 6px 0;
+	padding: 16px;
+	box-shadow:rgba(0,0,0,0.1) 1px 0px 1px 1px;
+	width: 55%;
+}
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+textarea,
+select {
+	vertical-align: top; -webkit-appearance: none; appearance: none;-moz-appearance: none;
+	width: 100%;
+	height: 3em;
+	padding-left: 0.4em;
+    margin-bottom: 1em;
+	border: none;
+	border-radius: 0;
+	color:#757575;
+	font-size: 1em;
+	transition: all 0.3s;
+	text-transform: uppercase;
+	background: #ffffff;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	border-color: #e4fafc;
+}
+input[type='submit'],
+input[type='button'],
+button {
+	border: none;
+	color:#ffffff;
+	background: #00BCD4;
+	cursor: pointer;
+	padding: 1em 2em;
+	margin-top: 1em;
+	border-radius: 6px;
+	transition: all 0.3s;
+    position: absolute;
+        left: 45%;
+}
+input[type='text']:focus,
+input[type='tel']:focus,
+input[type='email']:focus,
+textarea:focus,
+select:focus {
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	border-color: #00BCD4;
+
+	outline: none;
+}
+input[type='text']:hover,
+input[type='tel']:hover,
+input[type='email']:hover,
+textarea:hover,
+select:hover {
+	background: #e4fcfa;
+}
+input[type='submit']:hover,
+input[type='button']:hover,
+button:hover {
+	background: #40e3ec;
+}
+textarea {
+	height: 30em; min-height: 10em;
+	resize: none;
+}
+input[type='text']::placeholder,
+input[type='tel']::placeholder,
+input[type='email']::placeholder,
+textarea::placeholder,
+select {
+	text-transform: uppercase;
+}
+.cp_cf7name,
+.cp_cf7email,
+.cp_cf7telephone,
+.cp_cf7subject,
+.cp_cf7textarea,
+.cp_cf7submit {
+	margin: 0 0 0 0;
+	position: relative;
+}
+.cp_cf7submit {
+	border-width: 0;
+	text-align: center;
+}
+
+.cp_cf7subject::before {
+	position: absolute;
+	top: 1.5em;
+	right: 0.7em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #00BCD4 transparent transparent transparent;
+	pointer-events: none;
+	z-index: 1;
+}
+.cp_cf7subject:hover::before {
+	border-color: #00BCD4 transparent transparent transparent;
+}
+.cp_photo h1 {
+	text-align: center;
+	margin: 1em auto 0.5em auto;
+	position: relative;
+	width: 10em;
+}
+.cp_photo h2 {
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	padding-left: 2em;
+	position: relative;
+}
+.cp_photo h2::before {
+	font-family: Fontawesome;
+	position: absolute;
+	content: '\f007';
+	top: 5px;
+	left: 0.7em;
+}
+.cp_photo p {
+	margin: 0;
+	padding: 0;
+	padding-left: 1em;
+	position: relative;
+}
+.cp_photo ul {
+	list-style: none;
+	position: absolute;
+	bottom:1em;
+	left: 0;
+	margin: 0;
+	padding: 1em 1em 0 1em;
+}
+.cp_photo ul li {
+	display: inline;
+}
+.cp_photo ul li a {
+	transition: all 0.3s;
+	color: #ffffff;
+}
+.cp_photo ul li a:hover {
+	color: #62e4f0;
+}
+@media all and (max-width:480px) {
+	.cp_cont {
+		display: block;
+		height: auto;
+		border-radius: 6px;
+		box-shadow:rgba(0,0,0,0.1) 0px 1px 1px 1px;
+	}
+	.cp_photo {
+		border-radius: 6px 6px 0 0;
+		width: 100%;
+		height: 260px;
+		box-shadow:none;
+	}
+	.cp_form {
+		border-radius: 0;
+		width: 100%;
+		box-shadow:none;
+	}
+}

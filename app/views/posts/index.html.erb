@@ -1,34 +1,19 @@
-<h1>記事一覧</h1>
 
-
-  <% @posts.each do |t| %>
-    <div class="cp_card04">
-      <div class="details">
-        <div class="category">
-          <p><%= t.word %></p>
+<div class="postall">
+    <h1>記事一覧</h1>
+    <% @posts.each do |t| %>
+      <div class="cp_card04">
+        <div class="details">
+          <div class="category">
+            <p><%= t.word %></p>
+          </div>
+        </div>
+        <div class="description">
+          <h2><%= t.title %></h2>
+          <div class="text">
+          <a href="#0" class=""><%= link_to "詳細へ", post_path(t.id) %></a>
+          </div>
         </div>
       </div>
-      <div class="description">
-        <h1><%= t.title %></h1>
-        <div class="text">
-        <a href="#0" class=""><%= link_to "詳細へ", post_path(t.id) %></a>
-        </div>
-      </div>
-    </div>
-  <% end %>
-
-
-<div class="cp_card04">
-
-	<div class="details">
-		<div class="category"><p>カテゴリー</p></div>
-		<div class="date"><span class="day">2016.06.21</span></div>
-	</div>
-	<div class="description">
-		<h1>記事タイトル</h1>
-		<div class="text">
-			<p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している...</p>
-			<a href="#0" class="">Read More</a>
-		</div>
-	</div>
+    <% end %>
 </div>
