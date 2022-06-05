@@ -1,7 +1,7 @@
 <div id="loading">
   <div id="loading_box">
     <div class="loading-one animation_loading">
-      <p class="loading-txt">Welcome to Geeta</p>
+      <p class="loading-txt">Welcome to Geeta!!!</p>
     </div>
   </div>
 </div>
@@ -11,7 +11,7 @@
   <div class="topMain">
     <div class="topFlex">
       <% @posts.first(2).each do |t| %>
-        <%= link_to post_path(t.id) do %>
+        <%= link_to post_path(t.id), class: "topLink" do %>
           <div class="topBox">
             <div class="imaBox">
               <%= image_tag @image, id: "topImg" %>
