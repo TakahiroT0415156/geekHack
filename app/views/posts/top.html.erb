@@ -1,0 +1,27 @@
+<div id="loading">
+  <div id="loading_box">
+    <div class="loading-one animation_loading">
+      <p class="loading-txt">Welcome to Geeta</p>
+    </div>
+  </div>
+</div>
+
+<div>
+  <p class="topSelect">あなたにおすすめの記事</p>
+  <div class="topMain">
+    <div class="topFlex">
+      <% @posts.first(2).each do |t| %>
+        <%= link_to post_path(t.id) do %>
+          <div class="topBox">
+            <div class="imaBox">
+              <%= image_tag @image, id: "topImg" %>
+            </div>
+            <div class="topTitle">
+              <%= t.title %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
